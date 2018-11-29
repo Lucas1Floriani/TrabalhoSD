@@ -20,7 +20,7 @@ namespace SoapClientWF
         private void btnCalc_Click(object sender, EventArgs e)
         {
             var contaValida = (PrimeiroNumero != string.Empty) && (SegundoNumero != string.Empty) && (operacao != OperacaoEnum.SemOperacao);
-            if (PrimeiroNumero.StartsWith("0") || SegundoNumero.StartsWith("0"))
+            if (SegundoNumero.StartsWith("0"))
                 contaValida = false;
 
             if (contaValida)
