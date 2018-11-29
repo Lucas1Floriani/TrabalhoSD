@@ -48,7 +48,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.btnNum0 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCalc
@@ -72,7 +74,7 @@
             // 
             // btnNum1
             // 
-            this.btnNum1.Location = new System.Drawing.Point(20, 301);
+            this.btnNum1.Location = new System.Drawing.Point(13, 203);
             this.btnNum1.Name = "btnNum1";
             this.btnNum1.Size = new System.Drawing.Size(51, 73);
             this.btnNum1.TabIndex = 2;
@@ -82,7 +84,7 @@
             // 
             // btnNum2
             // 
-            this.btnNum2.Location = new System.Drawing.Point(119, 301);
+            this.btnNum2.Location = new System.Drawing.Point(112, 203);
             this.btnNum2.Name = "btnNum2";
             this.btnNum2.Size = new System.Drawing.Size(51, 73);
             this.btnNum2.TabIndex = 3;
@@ -92,7 +94,7 @@
             // 
             // btnNum3
             // 
-            this.btnNum3.Location = new System.Drawing.Point(226, 301);
+            this.btnNum3.Location = new System.Drawing.Point(219, 203);
             this.btnNum3.Name = "btnNum3";
             this.btnNum3.Size = new System.Drawing.Size(51, 73);
             this.btnNum3.TabIndex = 4;
@@ -102,7 +104,7 @@
             // 
             // btnNum4
             // 
-            this.btnNum4.Location = new System.Drawing.Point(20, 207);
+            this.btnNum4.Location = new System.Drawing.Point(13, 109);
             this.btnNum4.Name = "btnNum4";
             this.btnNum4.Size = new System.Drawing.Size(51, 73);
             this.btnNum4.TabIndex = 5;
@@ -112,7 +114,7 @@
             // 
             // btnNum5
             // 
-            this.btnNum5.Location = new System.Drawing.Point(119, 207);
+            this.btnNum5.Location = new System.Drawing.Point(112, 109);
             this.btnNum5.Name = "btnNum5";
             this.btnNum5.Size = new System.Drawing.Size(51, 73);
             this.btnNum5.TabIndex = 6;
@@ -122,7 +124,7 @@
             // 
             // btnNum6
             // 
-            this.btnNum6.Location = new System.Drawing.Point(226, 207);
+            this.btnNum6.Location = new System.Drawing.Point(219, 109);
             this.btnNum6.Name = "btnNum6";
             this.btnNum6.Size = new System.Drawing.Size(51, 73);
             this.btnNum6.TabIndex = 7;
@@ -132,7 +134,7 @@
             // 
             // btnNum9
             // 
-            this.btnNum9.Location = new System.Drawing.Point(226, 117);
+            this.btnNum9.Location = new System.Drawing.Point(219, 19);
             this.btnNum9.Name = "btnNum9";
             this.btnNum9.Size = new System.Drawing.Size(51, 73);
             this.btnNum9.TabIndex = 10;
@@ -142,7 +144,7 @@
             // 
             // btnNum8
             // 
-            this.btnNum8.Location = new System.Drawing.Point(119, 117);
+            this.btnNum8.Location = new System.Drawing.Point(112, 19);
             this.btnNum8.Name = "btnNum8";
             this.btnNum8.Size = new System.Drawing.Size(51, 73);
             this.btnNum8.TabIndex = 9;
@@ -152,7 +154,7 @@
             // 
             // btnNum7
             // 
-            this.btnNum7.Location = new System.Drawing.Point(20, 117);
+            this.btnNum7.Location = new System.Drawing.Point(13, 19);
             this.btnNum7.Name = "btnNum7";
             this.btnNum7.Size = new System.Drawing.Size(51, 73);
             this.btnNum7.TabIndex = 8;
@@ -200,7 +202,7 @@
             this.btnOpMult.Name = "btnOpMult";
             this.btnOpMult.Size = new System.Drawing.Size(51, 73);
             this.btnOpMult.TabIndex = 11;
-            this.btnOpMult.Text = "*";
+            this.btnOpMult.Text = "X";
             this.btnOpMult.UseVisualStyleBackColor = true;
             this.btnOpMult.Click += new System.EventHandler(this.btnOpMult_Click);
             // 
@@ -232,7 +234,7 @@
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(20, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(257, 99);
+            this.panel1.Size = new System.Drawing.Size(277, 80);
             this.panel1.TabIndex = 18;
             // 
             // listBox1
@@ -245,7 +247,7 @@
             // 
             // btnNum0
             // 
-            this.btnNum0.Location = new System.Drawing.Point(20, 406);
+            this.btnNum0.Location = new System.Drawing.Point(13, 308);
             this.btnNum0.Name = "btnNum0";
             this.btnNum0.Size = new System.Drawing.Size(257, 73);
             this.btnNum0.TabIndex = 20;
@@ -253,12 +255,30 @@
             this.btnNum0.UseVisualStyleBackColor = true;
             this.btnNum0.Click += new System.EventHandler(this.btnNum0_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnNum0);
+            this.groupBox1.Controls.Add(this.btnNum9);
+            this.groupBox1.Controls.Add(this.btnNum8);
+            this.groupBox1.Controls.Add(this.btnNum7);
+            this.groupBox1.Controls.Add(this.btnNum6);
+            this.groupBox1.Controls.Add(this.btnNum5);
+            this.groupBox1.Controls.Add(this.btnNum4);
+            this.groupBox1.Controls.Add(this.btnNum3);
+            this.groupBox1.Controls.Add(this.btnNum2);
+            this.groupBox1.Controls.Add(this.btnNum1);
+            this.groupBox1.Location = new System.Drawing.Point(7, 98);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(290, 391);
+            this.groupBox1.TabIndex = 21;
+            this.groupBox1.TabStop = false;
+            // 
             // Calculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(756, 491);
-            this.Controls.Add(this.btnNum0);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnActionClear);
@@ -267,20 +287,14 @@
             this.Controls.Add(this.btnOpSoma);
             this.Controls.Add(this.btnOpDiv);
             this.Controls.Add(this.btnOpMult);
-            this.Controls.Add(this.btnNum9);
-            this.Controls.Add(this.btnNum8);
-            this.Controls.Add(this.btnNum7);
-            this.Controls.Add(this.btnNum6);
-            this.Controls.Add(this.btnNum5);
-            this.Controls.Add(this.btnNum4);
-            this.Controls.Add(this.btnNum3);
-            this.Controls.Add(this.btnNum2);
-            this.Controls.Add(this.btnNum1);
             this.Controls.Add(this.btnCalc);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Calculadora";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Calculadora";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -307,6 +321,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button btnNum0;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
