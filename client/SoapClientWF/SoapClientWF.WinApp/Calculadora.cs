@@ -49,7 +49,7 @@ namespace SoapClientWF
             }
             else
             {
-                MessageBox.Show("Você ainda não montou uma conta valida e ela foi apagada");
+                MessageBox.Show("Você não montou uma conta valida e ela foi apagada");
                 LimparCalculo();
             }            
                       
