@@ -17,7 +17,7 @@ namespace SoapClientWF.Dominio.Features
         }
         public override string ToString()
         {
-            return string.Format("{0}{1}{2} = {3}", PrimeiroNumero, GetOperacao(), SegundoNumero, Resultado);
+            return string.Format("{0} {1} {2} = {3}", PrimeiroNumero, GetOperacao(), SegundoNumero, Resultado);
         }
 
         private string GetOperacao()

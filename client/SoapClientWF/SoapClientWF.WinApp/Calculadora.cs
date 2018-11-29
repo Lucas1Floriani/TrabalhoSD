@@ -20,6 +20,9 @@ namespace SoapClientWF
         private void btnCalc_Click(object sender, EventArgs e)
         {
             var contaValida = (PrimeiroNumero != string.Empty) && (SegundoNumero != string.Empty) && (operacao != OperacaoEnum.SemOperacao);
+            if (PrimeiroNumero.StartsWith("0") || SegundoNumero.StartsWith("0"))
+                contaValida = false;
+
             if (contaValida)
             {
                 var service = new CalculadoraServerClient();
@@ -35,8 +38,12 @@ namespace SoapClientWF
                     ExecDivisao(service, num1, num2);
                 AtualizarLabelContaAtual();
             }
-            else            
-                MessageBox.Show("Você ainda não montou uma conta valida");            
+            else
+            {
+                MessageBox.Show("Você ainda não montou uma conta valida e ela foi apagada");
+                LimparCalculo();
+            }            
+                      
         }
 
         private void ExecDivisao(CalculadoraServerClient service, float num1, float num2)
@@ -123,6 +130,10 @@ namespace SoapClientWF
             AtualizarLabelContaAtual();
         }
 
+        private void btnNum0_Click(object sender, EventArgs e)
+        {
+            AtualizarNumeros(btnNum0);
+        }
         private void btnNum2_Click(object sender, EventArgs e)
         {
             AtualizarNumeros(btnNum2);

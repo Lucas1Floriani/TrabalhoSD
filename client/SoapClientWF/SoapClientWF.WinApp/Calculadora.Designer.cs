@@ -47,12 +47,13 @@
             this.BtnCaracVirg = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btnNum0 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCalc
             // 
-            this.btnCalc.Location = new System.Drawing.Point(329, 301);
+            this.btnCalc.Location = new System.Drawing.Point(332, 406);
             this.btnCalc.Name = "btnCalc";
             this.btnCalc.Size = new System.Drawing.Size(158, 73);
             this.btnCalc.TabIndex = 0;
@@ -162,7 +163,7 @@
             // BtnOpSub
             // 
             this.BtnOpSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnOpSub.Location = new System.Drawing.Point(436, 117);
+            this.BtnOpSub.Location = new System.Drawing.Point(439, 209);
             this.BtnOpSub.Name = "BtnOpSub";
             this.BtnOpSub.Size = new System.Drawing.Size(51, 73);
             this.BtnOpSub.TabIndex = 14;
@@ -173,7 +174,7 @@
             // btnOpSoma
             // 
             this.btnOpSoma.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpSoma.Location = new System.Drawing.Point(329, 117);
+            this.btnOpSoma.Location = new System.Drawing.Point(332, 209);
             this.btnOpSoma.Name = "btnOpSoma";
             this.btnOpSoma.Size = new System.Drawing.Size(51, 73);
             this.btnOpSoma.TabIndex = 13;
@@ -184,7 +185,7 @@
             // btnOpDiv
             // 
             this.btnOpDiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpDiv.Location = new System.Drawing.Point(436, 207);
+            this.btnOpDiv.Location = new System.Drawing.Point(439, 299);
             this.btnOpDiv.Name = "btnOpDiv";
             this.btnOpDiv.Size = new System.Drawing.Size(51, 73);
             this.btnOpDiv.TabIndex = 12;
@@ -195,7 +196,7 @@
             // btnOpMult
             // 
             this.btnOpMult.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpMult.Location = new System.Drawing.Point(329, 207);
+            this.btnOpMult.Location = new System.Drawing.Point(332, 299);
             this.btnOpMult.Name = "btnOpMult";
             this.btnOpMult.Size = new System.Drawing.Size(51, 73);
             this.btnOpMult.TabIndex = 11;
@@ -206,7 +207,7 @@
             // btnActionClear
             // 
             this.btnActionClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActionClear.Location = new System.Drawing.Point(436, 25);
+            this.btnActionClear.Location = new System.Drawing.Point(439, 117);
             this.btnActionClear.Name = "btnActionClear";
             this.btnActionClear.Size = new System.Drawing.Size(51, 73);
             this.btnActionClear.TabIndex = 16;
@@ -217,7 +218,7 @@
             // BtnCaracVirg
             // 
             this.BtnCaracVirg.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCaracVirg.Location = new System.Drawing.Point(329, 25);
+            this.BtnCaracVirg.Location = new System.Drawing.Point(332, 117);
             this.BtnCaracVirg.Name = "BtnCaracVirg";
             this.BtnCaracVirg.Size = new System.Drawing.Size(51, 73);
             this.BtnCaracVirg.TabIndex = 15;
@@ -242,11 +243,22 @@
             this.listBox1.Size = new System.Drawing.Size(199, 355);
             this.listBox1.TabIndex = 19;
             // 
+            // btnNum0
+            // 
+            this.btnNum0.Location = new System.Drawing.Point(20, 406);
+            this.btnNum0.Name = "btnNum0";
+            this.btnNum0.Size = new System.Drawing.Size(257, 73);
+            this.btnNum0.TabIndex = 20;
+            this.btnNum0.Text = "0";
+            this.btnNum0.UseVisualStyleBackColor = true;
+            this.btnNum0.Click += new System.EventHandler(this.btnNum0_Click);
+            // 
             // Calculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(756, 410);
+            this.ClientSize = new System.Drawing.Size(756, 491);
+            this.Controls.Add(this.btnNum0);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnActionClear);
@@ -294,6 +306,7 @@
         private System.Windows.Forms.Button BtnCaracVirg;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button btnNum0;
     }
 }
 
