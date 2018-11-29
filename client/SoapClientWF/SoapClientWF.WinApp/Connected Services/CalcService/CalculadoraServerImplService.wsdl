@@ -15,18 +15,18 @@
   <message name="subtracaoResponse">
     <part name="return" type="xsd:float" />
   </message>
-  <message name="multiplicacao">
-    <part name="arg0" type="xsd:float" />
-    <part name="arg1" type="xsd:float" />
-  </message>
-  <message name="multiplicacaoResponse">
-    <part name="return" type="xsd:float" />
-  </message>
   <message name="divisao">
     <part name="arg0" type="xsd:float" />
     <part name="arg1" type="xsd:float" />
   </message>
   <message name="divisaoResponse">
+    <part name="return" type="xsd:float" />
+  </message>
+  <message name="multiplicacao">
+    <part name="arg0" type="xsd:float" />
+    <part name="arg1" type="xsd:float" />
+  </message>
+  <message name="multiplicacaoResponse">
     <part name="return" type="xsd:float" />
   </message>
   <portType name="CalculadoraServer">
@@ -38,13 +38,13 @@
       <input wsam:Action="http://calc/CalculadoraServer/subtracaoRequest" message="tns:subtracao" />
       <output wsam:Action="http://calc/CalculadoraServer/subtracaoResponse" message="tns:subtracaoResponse" />
     </operation>
-    <operation name="multiplicacao" parameterOrder="arg0 arg1">
-      <input wsam:Action="http://calc/CalculadoraServer/multiplicacaoRequest" message="tns:multiplicacao" />
-      <output wsam:Action="http://calc/CalculadoraServer/multiplicacaoResponse" message="tns:multiplicacaoResponse" />
-    </operation>
     <operation name="divisao" parameterOrder="arg0 arg1">
       <input wsam:Action="http://calc/CalculadoraServer/divisaoRequest" message="tns:divisao" />
       <output wsam:Action="http://calc/CalculadoraServer/divisaoResponse" message="tns:divisaoResponse" />
+    </operation>
+    <operation name="multiplicacao" parameterOrder="arg0 arg1">
+      <input wsam:Action="http://calc/CalculadoraServer/multiplicacaoRequest" message="tns:multiplicacao" />
+      <output wsam:Action="http://calc/CalculadoraServer/multiplicacaoResponse" message="tns:multiplicacaoResponse" />
     </operation>
   </portType>
   <binding name="CalculadoraServerImplPortBinding" type="tns:CalculadoraServer">
@@ -67,7 +67,7 @@
         <soap:body use="literal" namespace="http://calc/" />
       </output>
     </operation>
-    <operation name="multiplicacao">
+    <operation name="divisao">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" namespace="http://calc/" />
@@ -76,7 +76,7 @@
         <soap:body use="literal" namespace="http://calc/" />
       </output>
     </operation>
-    <operation name="divisao">
+    <operation name="multiplicacao">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" namespace="http://calc/" />

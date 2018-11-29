@@ -20,23 +20,32 @@ namespace SoapClientWF
         private void btnCalc_Click(object sender, EventArgs e)
         {
             var contaValida = (PrimeiroNumero != string.Empty) && (SegundoNumero != string.Empty) && (operacao != OperacaoEnum.SemOperacao);
-            if (SegundoNumero.StartsWith("0"))
+            if (SegundoNumero.StartsWith("0") && operacao == OperacaoEnum.Divisao)
                 contaValida = false;
 
             if (contaValida)
             {
-                var service = new CalculadoraServerClient();
-                float num1 = float.Parse(PrimeiroNumero);
-                float num2 = float.Parse(SegundoNumero);
-                if (operacao == OperacaoEnum.Soma)
-                    ExecSoma(service, num1, num2);
-                else if (operacao == OperacaoEnum.Subtracao)
-                    ExecSubtracao(service, num1, num2);
-                else if (operacao == OperacaoEnum.Multiplicacao)
-                    ExecMultiplicacao(service, num1, num2);
-                else if (operacao == OperacaoEnum.Divisao)
-                    ExecDivisao(service, num1, num2);
-                AtualizarLabelContaAtual();
+                try
+                {
+                    var service = new CalculadoraServerClient();
+
+                    float num1 = float.Parse(PrimeiroNumero);
+                    float num2 = float.Parse(SegundoNumero);
+                    if (operacao == OperacaoEnum.Soma)
+                        ExecSoma(service, num1, num2);
+                    else if (operacao == OperacaoEnum.Subtracao)
+                        ExecSubtracao(service, num1, num2);
+                    else if (operacao == OperacaoEnum.Multiplicacao)
+                        ExecMultiplicacao(service, num1, num2);
+                    else if (operacao == OperacaoEnum.Divisao)
+                        ExecDivisao(service, num1, num2);
+                    AtualizarLabelContaAtual();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Verifique se a API está funcionando.\n" + ex.Message);
+                }
+               
             }
             else
             {

@@ -33,15 +33,6 @@ namespace SoapClientWF.WinApp.CalcService {
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         System.Threading.Tasks.Task<float> subtracaoAsync(float arg0, float arg1);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://calc/CalculadoraServer/multiplicacaoRequest", ReplyAction="http://calc/CalculadoraServer/multiplicacaoResponse")]
-        [System.ServiceModel.DataContractFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        float multiplicacao(float arg0, float arg1);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://calc/CalculadoraServer/multiplicacaoRequest", ReplyAction="http://calc/CalculadoraServer/multiplicacaoResponse")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        System.Threading.Tasks.Task<float> multiplicacaoAsync(float arg0, float arg1);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://calc/CalculadoraServer/divisaoRequest", ReplyAction="http://calc/CalculadoraServer/divisaoResponse")]
         [System.ServiceModel.DataContractFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -50,6 +41,15 @@ namespace SoapClientWF.WinApp.CalcService {
         [System.ServiceModel.OperationContractAttribute(Action="http://calc/CalculadoraServer/divisaoRequest", ReplyAction="http://calc/CalculadoraServer/divisaoResponse")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         System.Threading.Tasks.Task<float> divisaoAsync(float arg0, float arg1);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://calc/CalculadoraServer/multiplicacaoRequest", ReplyAction="http://calc/CalculadoraServer/multiplicacaoResponse")]
+        [System.ServiceModel.DataContractFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        float multiplicacao(float arg0, float arg1);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://calc/CalculadoraServer/multiplicacaoRequest", ReplyAction="http://calc/CalculadoraServer/multiplicacaoResponse")]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        System.Threading.Tasks.Task<float> multiplicacaoAsync(float arg0, float arg1);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -95,20 +95,20 @@ namespace SoapClientWF.WinApp.CalcService {
             return base.Channel.subtracaoAsync(arg0, arg1);
         }
         
-        public float multiplicacao(float arg0, float arg1) {
-            return base.Channel.multiplicacao(arg0, arg1);
-        }
-        
-        public System.Threading.Tasks.Task<float> multiplicacaoAsync(float arg0, float arg1) {
-            return base.Channel.multiplicacaoAsync(arg0, arg1);
-        }
-        
         public float divisao(float arg0, float arg1) {
             return base.Channel.divisao(arg0, arg1);
         }
         
         public System.Threading.Tasks.Task<float> divisaoAsync(float arg0, float arg1) {
             return base.Channel.divisaoAsync(arg0, arg1);
+        }
+        
+        public float multiplicacao(float arg0, float arg1) {
+            return base.Channel.multiplicacao(arg0, arg1);
+        }
+        
+        public System.Threading.Tasks.Task<float> multiplicacaoAsync(float arg0, float arg1) {
+            return base.Channel.multiplicacaoAsync(arg0, arg1);
         }
     }
 }
