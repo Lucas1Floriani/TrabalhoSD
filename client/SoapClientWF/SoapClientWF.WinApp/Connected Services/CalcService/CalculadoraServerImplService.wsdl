@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://calc/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="CalculadoraServerImplService" targetNamespace="http://calc/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types />
+  <message name="soma">
+    <part name="arg0" type="xsd:float" />
+    <part name="arg1" type="xsd:float" />
+  </message>
+  <message name="somaResponse">
+    <part name="return" type="xsd:float" />
+  </message>
+  <message name="subtracao">
+    <part name="arg0" type="xsd:float" />
+    <part name="arg1" type="xsd:float" />
+  </message>
+  <message name="subtracaoResponse">
+    <part name="return" type="xsd:float" />
+  </message>
+  <message name="multiplicacao">
+    <part name="arg0" type="xsd:float" />
+    <part name="arg1" type="xsd:float" />
+  </message>
+  <message name="multiplicacaoResponse">
+    <part name="return" type="xsd:float" />
+  </message>
+  <message name="divisao">
+    <part name="arg0" type="xsd:float" />
+    <part name="arg1" type="xsd:float" />
+  </message>
+  <message name="divisaoResponse">
+    <part name="return" type="xsd:float" />
+  </message>
+  <portType name="CalculadoraServer">
+    <operation name="soma" parameterOrder="arg0 arg1">
+      <input wsam:Action="http://calc/CalculadoraServer/somaRequest" message="tns:soma" />
+      <output wsam:Action="http://calc/CalculadoraServer/somaResponse" message="tns:somaResponse" />
+    </operation>
+    <operation name="subtracao" parameterOrder="arg0 arg1">
+      <input wsam:Action="http://calc/CalculadoraServer/subtracaoRequest" message="tns:subtracao" />
+      <output wsam:Action="http://calc/CalculadoraServer/subtracaoResponse" message="tns:subtracaoResponse" />
+    </operation>
+    <operation name="multiplicacao" parameterOrder="arg0 arg1">
+      <input wsam:Action="http://calc/CalculadoraServer/multiplicacaoRequest" message="tns:multiplicacao" />
+      <output wsam:Action="http://calc/CalculadoraServer/multiplicacaoResponse" message="tns:multiplicacaoResponse" />
+    </operation>
+    <operation name="divisao" parameterOrder="arg0 arg1">
+      <input wsam:Action="http://calc/CalculadoraServer/divisaoRequest" message="tns:divisao" />
+      <output wsam:Action="http://calc/CalculadoraServer/divisaoResponse" message="tns:divisaoResponse" />
+    </operation>
+  </portType>
+  <binding name="CalculadoraServerImplPortBinding" type="tns:CalculadoraServer">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <operation name="soma">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://calc/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://calc/" />
+      </output>
+    </operation>
+    <operation name="subtracao">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://calc/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://calc/" />
+      </output>
+    </operation>
+    <operation name="multiplicacao">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://calc/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://calc/" />
+      </output>
+    </operation>
+    <operation name="divisao">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://calc/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://calc/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="CalculadoraServerImplService">
+    <port name="CalculadoraServerImplPort" binding="tns:CalculadoraServerImplPortBinding">
+      <soap:address location="http://127.0.0.1:2017/calc" />
+    </port>
+  </service>
+</definitions>
